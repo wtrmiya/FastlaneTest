@@ -15,18 +15,24 @@
 
 default_platform(:ios)
 
-platform :ios do
-  before_all do |lane|
-    ensure_xcode_version(version: "15.2")
-  end
+#platform :ios do
+#  before_all do |lane|
+#    ensure_xcode_version(version: "15.2")
+#  end
+#
+#  lane :unittest do |options|
+#    run_tests(
+#      project: "FastlaneTest.xcodeproj",
+#      scheme: "FastlaneTest",
+#      configuration: "Debug",
+#      devices: ["iPhone 15 Pro"],
+#      output_directory: "test_output"
+#    )
+#  end
+#end
 
-  lane :unittest do |options|
-    run_tests(
-      project: "FastlaneTest.xcodeproj",
-      scheme: "FastlaneTest",
-      configuration: "Debug",
-      devices: ["iPhone 15 Pro"],
-      output_directory: "test_output"
-    )
+platform :ios do
+  lane :hello_fastlane do |options|
+    puts("Hello!!!")
   end
 end
