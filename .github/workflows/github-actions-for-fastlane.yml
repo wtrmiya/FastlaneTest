@@ -6,7 +6,7 @@ jobs:
     name: Run Fastlane Sample
     steps:
       - uses: actions/checkout@v4
-      - run: sudo xcode-select -s '/Applications/Xcode_15.2.app/Contents/Developer'
+      - run: sudo xcode-select -s '/Applications/Xcode_15.2.app'
       - run: xcodebuild -version
       - run: bundle install
       - run: bundle exec fastlane hello_fastlane
