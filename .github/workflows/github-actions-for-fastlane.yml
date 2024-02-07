@@ -2,7 +2,7 @@ name: GitHub Actions for Fastlane
 on: [push]
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-13
     name: Run Fastlane Sample
     steps:
       - uses: actions/checkout@v4
